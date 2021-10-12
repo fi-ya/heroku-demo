@@ -2,7 +2,7 @@
   "name": "heroku-demo",
   "version": "1.0.0",
   "description": "Heroku setup demo",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/fi-ya/heroku-demo/issues"
   },
-  "homepage": "https://github.com/fi-ya/heroku-demo#readme"
+  "homepage": "https://github.com/fi-ya/heroku-demo#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "cypress": "^8.6.0",
+    "nodemon": "^2.0.13"
+  }
 }

@@ -1,0 +1,75 @@
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Reem Kufi';
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  min-width: 30%;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+
+.logo {
+  height: auto;
+  max-width: 100%;
+}
+
+input {
+  height: 1.2rem;
+  margin-bottom: .5rem;
+}
+
+button {
+  font-size: 1rem;
+  font-family: "Reem Kufi";
+  margin: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+}
+button[name="id"]{
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+  border: 2px solid black;
+  border-radius: 1rem;
+  width: fit-content;
+  margin: auto;
+  padding: 1rem;
+}
+
+a:hover {
+  background-color: pink;
+  transform: scale(1.1, 1.1);
+}
+div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div span{
+  margin: 1rem;
+}

@@ -38,10 +38,11 @@ A basic guide to setting up a [project](https://learn.foundersandcoders.com/cour
   - public* (styles.css)
   - routes* (homes.js, logIn.js, logOut.js, posts.js, signUp.js)
   - database* (connection.js, init.sql, model.js)
-  - scripts* (create_db, populate_db)
+  - [scripts](https://github.com/oliverjam/express-postgres-example#local-db-setup)* (create_db, populate_db) - dont forget to add permissions `chmod +x`
 
 * These files can be created after the app is deployed on Heroku, otherwise you will run into errors such as `Error: Please set the DATABASE_URL environment variable
 (/app/database/connection.js:9:9)`.
+
 ## Setup Heroku CLI
 [(Back to top)](#table-of-contents)
 I followed [Heroku Dev Center's](https://devcenter.heroku.com/articles/heroku-cli#download-and-install) guide.
@@ -50,7 +51,6 @@ I followed [Heroku Dev Center's](https://devcenter.heroku.com/articles/heroku-cl
   ```javascript
   heroku --version
   ```
-
 - Install heroku
   ```javascript
   npm install -g heroku
@@ -65,13 +65,13 @@ You’ll be prompted to enter any key to go to your web browser to complete logi
 [(Back to top)](#table-of-contents)
 - Sign up/log in to Heroku.
 
-***Create app***
+### Create app
 - Top right of dashboard screen click
     `New`>`Create new app`> Add app name > `Europe`(if in uk)>`Create app`
 
 There are two ways you can deploy your app; via Herouku CLI or GitHub in the `Deploy` section.
 
-***Connect to github***
+### Connect to github
 - Under `Deployment method` click `GitHub` and under `Connect to Github` search and select your project repo
 - Next section `Automatic deploys` click `Enable Automatic Deploys`
   - This will automatic rebuild and deploy your app on Heroku with every push to main branch of your repository.
@@ -82,7 +82,7 @@ There are two ways you can deploy your app; via Herouku CLI or GitHub in the `De
 
 ![Screenshot 2021-10-13 at 17 21 55](https://user-images.githubusercontent.com/69358550/137174113-bed58b87-ce2f-46c1-8b79-9125ccd9840b.png)
 
-***Heroku Git using Heroku CLI***
+### Heroku Git using Heroku CLI
 
 To use this method you must have installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and follow these step.
 ![Screenshot 2021-10-13 at 17 20 10](https://user-images.githubusercontent.com/69358550/137174180-313860a8-6061-409b-8399-4ac09720ad71.png)
@@ -90,12 +90,12 @@ To use this method you must have installed [Heroku CLI](https://devcenter.heroku
 ## Deploy your PostgreSQL database on Heroku
 [(Back to top)](#table-of-contents)
 
-***Add Postgres database***
+### Add Postgres database
 
 Under `Resources` section under `Add-ons` search `Heroku Postgres` > `Hobby Dev - Free` > `Provision`
 Now you should see a tab under the `Add-ons`search bar labelled `Heroku Postgres`
 
-***Connect to the database***
+### Connect to the database
 
 Under `Setting` section > `Config Vars` section > `Revel Config Vars` > copy `DATABASE_URL` string.
 Note here is where you can also add API keys, tokens(cookie secrets) and [environment variables](https://github.com/oliverjam/express-postgres-example#deploying-to-heroku) & .
@@ -105,7 +105,7 @@ In the terminal connect your database(init.sql) to your production(Heroku) postg
   - `\i database/init.sql`
 - You now have access/can query data from your heroku production database from your terminal.
 
-***View Postgres database***
+### View Postgres database
 
 Under `Resources` section you should see a tab under the `Add-ons`search bar labelled `Heroku Postgres`
 
@@ -125,7 +125,7 @@ There are two ways:
 `Add collaborator` > insert email > `Save changes` > ask team mate to check email > `Accept Invitation`
 Team mate now has access to Heroku app and add-ons.
 
-***Delete collaborator***
+### Delete collaborator
 
 Under `Access` tab click on the pen emoji next to the collaborator you wish to remove.
 Click `Delete collaborator` > `Confirm`
@@ -133,13 +133,13 @@ Click `Delete collaborator` > `Confirm`
 ## Debugging in Heroku
 [(Back to top)](#table-of-contents)
 
-***In the terminal***
+### In the terminal
 
 Run command
 ```javascript
   heroku logs --app=your-app-name --tail
 ```
-***In Heroku***
+### In Heroku
 
 Top right hand corner > `More` > `View logs`
 Here you can view your build logs especially handy when debugging!

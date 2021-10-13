@@ -4,6 +4,7 @@ A basic guide to setting up a [project](https://learn.foundersandcoders.com/cour
 
 ## Table of contents
 - [Setup project](#setup-project)
+- [Setup local postgres database](#setup-local-postgres-database)
 - [Setup Heroku CLI](#setup-heroku-cli)
 - [Deploy your project on Heroku](#deploy-your-project-on-heroku)
    - [Create app](#create-app)
@@ -43,7 +44,7 @@ A basic guide to setting up a [project](https://learn.foundersandcoders.com/cour
 * These files can be created after the app is deployed on Heroku, otherwise you will run into errors such as `Error: Please set the DATABASE_URL environment variable
 (/app/database/connection.js:9:9)`.
 
-## Setup local postgres db 
+## Setup local postgres database 
 Use [Oliverjam's](https://github.com/oliverjam) [Express Postgres Example tutorial](https://github.com/oliverjam/express-postgres-example#local-db-setup)
 
 a) Copy and paste code from `create_db` & `populate_db` files into your project

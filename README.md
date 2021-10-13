@@ -1,6 +1,10 @@
 # heroku-demo
 ---
-A basic guide to setting up a [project](https://learn.foundersandcoders.com/course/syllabus/apprenticeship/authentication/project/) hosted on Heroku with a PostgreSQL database using [Giovanna Aveiro's](https://dev.to/glrta/deploy-postgresql-in-node-js-to-heroku-for-beginners-1ck0) tutorial.
+A basic guide to setting up a [project](https://learn.foundersandcoders.com/course/syllabus/apprenticeship/authentication/project/) hosted on Heroku with a PostgreSQL database using [Giovanna Aveiro's](https://dev.to/glrta/deploy-postgresql-in-node-js-to-heroku-for-beginners-1ck0) and [OliverJam's](https://github.com/oliverjam/express-postgres-example#local-db-setup) tutorial for [Founders & Coders Bootcamp](https://github.com/foundersandcoders), [FAC22 cohort](https://github.com/fac22) during [Authentication week](https://learn.foundersandcoders.com/course/syllabus/apprenticeship/authentication/schedule/).
+
+<p align="center">
+   <img src="https://media3.giphy.com/media/l0Iy88cWKqBeBN92o/giphy.gif?cid=ecf05e47r29w57q0jy68u1bz7n5o5javfbt0ipccg4qjoedy&rid=giphy.gif&ct=g" alt="animated"/>
+</p>
 
 ## Table of contents
 - [Setup project](#setup-project)
@@ -22,8 +26,12 @@ A basic guide to setting up a [project](https://learn.foundersandcoders.com/cour
 - [Delete App](#delete-app)
 - [Resources](#resources)
 
-## Setup project
-[(Back to top)](#table-of-contents)
+<p align="center">
+   <img src="https://media.giphy.com/media/xT0xeiXommNrbX6HF6/giphy.gif"/>
+</p>
+
+## Setup project 
+[(Back to top)](#table-of-contents) 
 - Initialise git hub repo, with README & gitignore file (using node template)
 - Clone repo and open in VSCode
 - Install package.json, dependencies and devDependencies (express, pg, dotenv, bcryptjs, cookie-parser, nodemon, cypress)
@@ -43,6 +51,10 @@ A basic guide to setting up a [project](https://learn.foundersandcoders.com/cour
 
 * These files can be created after the app is deployed on Heroku, otherwise you will run into errors such as `Error: Please set the DATABASE_URL environment variable
 (/app/database/connection.js:9:9)`.
+
+<p align="center">
+   <img src="https://media.giphy.com/media/3oz8xNmCcNTW9QrvOw/giphy.gif"/>
+</p>
 
 ## Setup local postgres database 
 Use [Oliverjam's](https://github.com/oliverjam) [Express Postgres Example tutorial](https://github.com/oliverjam/express-postgres-example#local-db-setup)
@@ -89,6 +101,10 @@ I followed [Heroku Dev Center's](https://devcenter.heroku.com/articles/heroku-cl
     heroku login
     ```
 You’ll be prompted to enter any key to go to your web browser to complete login. The CLI will then log you in automatically.
+
+<p align="center">
+   <img src="https://media.giphy.com/media/xT3i1fXVbvyU52Ov2o/giphy.gif"/>
+</p>
 
 ## Deploy your project on Heroku
 [(Back to top)](#table-of-contents)
@@ -144,6 +160,10 @@ If you click on it you another tab will open showing data about your database (b
 
 ![Screenshot 2021-10-13 at 17 35 11](https://user-images.githubusercontent.com/69358550/137175983-cb3161b4-a79a-45c5-8caa-8574ae8299b9.png)
 
+<p align="center">
+   <img src="https://media.giphy.com/media/NEU34P7OlWe1a/giphy.gif"/>
+</p>
+
 ## Setup Team on Heroku
 [(Back to top)](#table-of-contents)
 
@@ -159,6 +179,10 @@ Team mate now has access to Heroku app and add-ons.
 Under `Access` tab click on the pen emoji next to the collaborator you wish to remove.
 Click `Delete collaborator` > `Confirm`
 
+<p align="center">
+   <img src="https://media.giphy.com/media/3oGNSMeVJ1cHup0OvC/giphy.gif"/>
+</p>
+
 ## Debugging in Heroku
 [(Back to top)](#table-of-contents)
 
@@ -172,6 +196,10 @@ Run command
 
 Top right hand corner > `More` > `View logs`
 Here you can view your build logs especially handy when debugging!
+
+<p align="center">
+   <img src="https://media.giphy.com/media/de5bARu0SsXiU/giphy.gif"/>
+</p>
 
 ## Delete App
 [(Back to top)](#table-of-contents)

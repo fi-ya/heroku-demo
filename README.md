@@ -38,10 +38,38 @@ A basic guide to setting up a [project](https://learn.foundersandcoders.com/cour
   - public* (styles.css)
   - routes* (homes.js, logIn.js, logOut.js, posts.js, signUp.js)
   - database* (connection.js, init.sql, model.js)
-  - [scripts](https://github.com/oliverjam/express-postgres-example#local-db-setup)* (create_db, populate_db) - dont forget to add permissions `chmod +x`
+  - [scripts](https://github.com/oliverjam/express-postgres-example#local-db-setup)* (create_db, populate_db)
 
 * These files can be created after the app is deployed on Heroku, otherwise you will run into errors such as `Error: Please set the DATABASE_URL environment variable
 (/app/database/connection.js:9:9)`.
+
+## Setup local postgres db 
+Use [Oliverjam's](https://github.com/oliverjam) [Express Postgres Example tutorial](https://github.com/oliverjam/express-postgres-example#local-db-setup)
+
+a) Copy and paste code from `create_db` & `populate_db` files into your project
+
+(i) Amend file path of `init.sql` file in `populate_db` file L17 to 
+   ```javascript
+   ./database/init.sql
+   ```
+(ii) Do NOT change any code in `create_db` file
+
+b) In the terminal run the following commands to allow permissions on each file to make them executable:
+   ```javascript
+   chmod +x ./scripts/create_db
+   ```
+   ```javascript
+   chmod +x ./scripts/populate_db
+   ```
+
+c) In terminal run script commands (Note add the name of your db . This will dynamically input this name into all of the locations
+   ```javascript
+   ./scripts/create_db <here>
+   ```
+(ii) Once you have a designed your database (`init.sql`), run the following command to populate your local db;
+   ```javascript
+     ./scripts/populate_db
+   ```
 
 ## Setup Heroku CLI
 [(Back to top)](#table-of-contents)

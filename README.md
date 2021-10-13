@@ -3,11 +3,21 @@
 A basic guide to setting up a [project](https://learn.foundersandcoders.com/course/syllabus/apprenticeship/authentication/project/) hosted on Heroku with a PostgreSQL database using [Giovanna Aveiro's](https://dev.to/glrta/deploy-postgresql-in-node-js-to-heroku-for-beginners-1ck0) tutorial.
 
 ## Table of contents
-
-- [# heroku-demo](#-heroku-demo)
-- [Table of contents](#table-of-contents)
 - [Setup project](#setup-project)
 - [Setup Heroku CLI](#setup-heroku-cli)
+- [Deploy your project on Heroku](#deploy-your-project-on-heroku)
+   - [Create app](#create-app)
+   - [Connect to github](#connect-to-github)
+   - [Heroku Git using Heroku CLI](#heroku-git-using-heroku-cli)
+- [Deploy your PostgreSQL database on Heroku](#deploy-your-postgressql-database-on-heroku)
+   - [Add Postgres database](#add-postgres-database)
+   - [Connect to the database](#connect-to-the-database)
+   - [View Postgres database](#view-postgres-database)
+- [Setup Team on Heroku](#setup=team-on-heroku)
+   - [Delete collaborator](#delete-collaborator)
+- [Debugging in Heroku](#debugging-in-heroku)
+   - [In the terminal](#in-the-terminal)
+   - [In Heroku](#in-heroku)
 - [Delete App](#delete-app)
 - [Resources](#resources)
 
@@ -68,19 +78,25 @@ There are two ways you can deploy your app; via Herouku CLI or GitHub in the `De
 - For the first deployment you need to deploy manually.
   - Under `Manual deploy` click `Deploy Branch`
   - You will be able to see the build log
-- Once app has successfully deployed you will see a `View` button which will open your app in another tab! :tada
+- Once app has successfully deployed you will see a `View` button which will open your app in another tab! 
+
 ![Screenshot 2021-10-13 at 17 21 55](https://user-images.githubusercontent.com/69358550/137174113-bed58b87-ce2f-46c1-8b79-9125ccd9840b.png)
 
 ***Heroku Git using Heroku CLI***
+
 To use this method you must have installed [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) and follow these step.
 ![Screenshot 2021-10-13 at 17 20 10](https://user-images.githubusercontent.com/69358550/137174180-313860a8-6061-409b-8399-4ac09720ad71.png)
+
 ## Deploy your PostgreSQL database on Heroku
 [(Back to top)](#table-of-contents)
+
 ***Add Postgres database***
+
 Under `Resources` section under `Add-ons` search `Heroku Postgres` > `Hobby Dev - Free` > `Provision`
 Now you should see a tab under the `Add-ons`search bar labelled `Heroku Postgres`
 
 ***Connect to the database***
+
 Under `Setting` section > `Config Vars` section > `Revel Config Vars` > copy `DATABASE_URL` string.
 Note here is where you can also add API keys, tokens(cookie secrets) and [environment variables](https://github.com/oliverjam/express-postgres-example#deploying-to-heroku) & .
 Insert `PGSSLMODE='no-verify'` where `PGSSLMODE` is KEY and `no-verify` is VALUE.
@@ -90,14 +106,18 @@ In the terminal connect your database(init.sql) to your production(Heroku) postg
 - You now have access/can query data from your heroku production database from your terminal.
 
 ***View Postgres database***
+
 Under `Resources` section you should see a tab under the `Add-ons`search bar labelled `Heroku Postgres`
+
 ![Screenshot 2021-10-13 at 17 32 22](https://user-images.githubusercontent.com/69358550/137175622-4e1ece9b-e4e5-4474-9a28-c7ee2eb90b75.png)
 
 If you click on it you another tab will open showing data about your database (below is an example).
+
 ![Screenshot 2021-10-13 at 17 35 11](https://user-images.githubusercontent.com/69358550/137175983-cb3161b4-a79a-45c5-8caa-8574ae8299b9.png)
 
 ## Setup Team on Heroku
 [(Back to top)](#table-of-contents)
+
 There are two ways:
 - `Access` tab
 - `Overview` tab > under `Collaborator activity` click on `Manage Access`
@@ -106,6 +126,7 @@ There are two ways:
 Team mate now has access to Heroku app and add-ons.
 
 ***Delete collaborator***
+
 Under `Access` tab click on the pen emoji next to the collaborator you wish to remove.
 Click `Delete collaborator` > `Confirm`
 
@@ -113,18 +134,24 @@ Click `Delete collaborator` > `Confirm`
 [(Back to top)](#table-of-contents)
 
 ***In the terminal***
+
 Run command
 ```javascript
   heroku logs --app=your-app-name --tail
 ```
 ***In Heroku***
+
 Top right hand corner > `More` > `View logs`
 Here you can view your build logs especially handy when debugging!
+
 ## Delete App
 [(Back to top)](#table-of-contents)
+
 `Settings` tab > bottom of page `Delete App` > Enter your app's name > `Delete app`
+
 ## Resources
 [(Back to top)](#table-of-contents)
+
 - [An Absolute Beginner Guide to Node Package Manager](https://www.section.io/engineering-education/beginner-guide-to-npm/)
 - [How to set up a free PostgreSQL database on Heroku](https://dev.to/prisma/how-to-setup-a-free-postgresql-database-on-heroku-1dc1)
 - [Deploy PostgreSQL in Node.js to Heroku for beginners](https://dev.to/glrta/deploy-postgresql-in-node-js-to-heroku-for-beginners-1ck0)
